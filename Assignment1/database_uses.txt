@@ -1,0 +1,12 @@
+Major: Computer Science
+
+1. relational database used to store user's information
+2. relational database used to store employee information
+3. relational database used to store client's information
+4. relational database used for WordPress site
+5. relational database used to record data from the environment
+6. relational database used to store and calculate accounting equations for client
+7. relational database used to hold items for an ecommerce site
+7. relational database used to hold transaction history
+9. relational database used to hold student grades
+10. relational database used to professor evaulations

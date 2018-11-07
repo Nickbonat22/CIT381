@@ -1,0 +1,23 @@
+home one-to-one relationship with join
+-join tab will be on the home page
+- member must be assigned member_id(enforced) 
+- first_name, last_name, email(enforced/non-null)
+
+
+home one-to-one relationship with login_update
+- login/update tab will be on the home page
+-a join_member_id is required to login/update
+
+join one-to-one relationship with login_update
+- join_member_id is required to login/update
+
+home one-to-many relationship with events
+- event_id foregin key in the home table so the correct event displays in "major highlights"
+- home page must have an event(non-enforced)
+
+join many-to-many relationship with blog
+- many joined members can work on a blog
+- member can work on many blogs
+- blog_id(enforced)
+- join_member_id(enforced)
+

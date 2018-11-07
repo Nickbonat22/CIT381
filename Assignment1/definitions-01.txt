@@ -1,0 +1,9 @@
+Nicholas Bonat
+Assignment 1
+
+	a.	primary key - this is a key that identifies a specific record in a relational database
+	b.	foreign key - this key identifies a row in a different table or the same table
+	c.	surrogate key - this key identifies an object in a database or modeled world
+	d.	entity integrity - this keeps track of primary keys for a database
+	e.	referential integrity - this is the reference between databases
+	f.	weak entity - this cannot be uniquely identified by itself and must use a foreign key

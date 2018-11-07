@@ -1,0 +1,2 @@
+model and screen size form a unique identifier
+manufacturer and model form a unique identifier

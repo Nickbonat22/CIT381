@@ -1,0 +1,13 @@
+Laptops
+
+manufacturer (string), 
+model (string), 
+screen size (float), 
+storage (integer), 
+ram (integer)
+
+	•	Apple, 2018 Macbook Pro, 13.3, 256, 8
+	•	Apple, 2018 Macbook Pro, 15.4, 500, 16
+	•	HP, Spectre x360, 15.4, 512, 16
+	•	Lenovo, IdeaPad, 14, 32, 2 
+	•	Dell, Space, 11.1, 123, 8

@@ -1,0 +1,3 @@
+Columns with repeating data:
+
+manufacturer, screen size, storage, ram
