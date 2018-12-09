@@ -1,0 +1,65 @@
+Other Import Methods
+
+1.
+With MongoDB, you can use insert(), insertOne(), or insertMany() to insert JSON documents into a MongoDB database
+
+https://www.quackit.com/json/tutorial/json_with_database.cfm
+https://docs.mongodb.com/manual/reference/method/db.collection.insert/
+
+An example of this import option would look like this:
+db.artists.insert({
+  artistname : "Deep Purple",
+    albums : [
+      {
+        album : "Machine Head",
+        year : 1972,
+        genre : "Rock"
+      }, 
+      {
+        album : "Stormbringer",
+        year : 1974,
+        genre : "Rock"
+      }
+    ]
+})
+
+The json is the parameter for the insert statement. I think this method is striaght forward and effective, it is something I could see myself using. A possible problem is inserting a long stretch of json and making sure there are no duplicate values for primary keys
+
+2.
+Importing files using OPENROWSET has statements like INSERT, UPDATE, DELETE
+
+https://www.mssqltips.com/sqlservertip/5295/different-ways-to-import-json-files-into-sql-server/
+https://docs.microsoft.com/en-us/sql/t-sql/functions/openrowset-transact-sql?view=sql-server-2017
+
+An example of this method:
+OPENROWSET   
+( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'   
+   | 'provider_string' }   
+   , {   [ catalog. ] [ schema. ] object   
+       | 'query'   
+     }   
+   | BULK 'data_file' ,   
+       { FORMATFILE = 'format_file_path' [ <bulk_options> ]  
+       | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }  
+} )   
+
+<bulk_options> ::=  
+   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]   
+   [ , DATASOURCE = 'data_source_name' ]
+   [ , ERRORFILE = 'file_name' ]  
+   [ , ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ , FIRSTROW = first_row ]   
+   [ , LASTROW = last_row ]   
+   [ , MAXERRORS = maximum_errors ]   
+   [ , ROWS_PER_BATCH = rows_per_batch ]  
+   [ , ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) [ UNIQUE ] ]
+
+   -- bulk_options related to input file format
+   [ , FORMAT = 'CSV' ]
+   [ , FIELDQUOTE = 'quote_characters']
+   [ , FORMATFILE = 'format_file_path' ]
+
+This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. At first this method looks complicated but it is pretty straight forward as well and lets you type the column name yourself. A problem could be human error when typing.
+
+
+
